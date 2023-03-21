@@ -1,6 +1,14 @@
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 body {
   background-color: #0a0a05;
@@ -16,10 +24,14 @@ canvas {
   z-index: 1;
 }
 
-main,
-nav {
+main {
   position: relative;
   z-index: 2;
   overflow: scroll;
   height: 100%;
+}
+
+nav {
+  position: relative;
+  z-index: 2;
 }

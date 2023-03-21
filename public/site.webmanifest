@@ -1,25 +1,28 @@
 {
-  "name": "Kiefer Hogg's Website",
+  "$schema": "https://json.schemastore.org/web-manifest",
+  "name": "Kiefer Hogg",
   "short_name": "Kiefer Hogg",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "description": "Kiefer Hogg's Website",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/images/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/images/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "path/to/maskable_icon.png",
+      "src": "/images/maskable_icon.png",
       "sizes": "196x196",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
-  ],
-  "theme_color": "#000000",
-  "background_color": "#000000",
-  "display": "standalone"
+  ]
 }

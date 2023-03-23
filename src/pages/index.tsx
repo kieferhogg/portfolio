@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <meta content="https://www.kieferhogg.com" property="og:url" />
         <meta content="#0a0a05" data-react-helmet="true" name="theme-color" />
       </Head>
-      <nav className="flex-row justify-start w-20 m-2 h-screen fixed top-0 left-0 hidden md:flex">
+      <nav className="flex-row justify-start w-20 m-2 h-screen fixed top-0 left-0 hidden md:flex z-10 text-husqy-textColor">
         <ul className="flex flex-col items-center w-full mt-4">
           <li className="flex flex-row justify-center items-center w-full my-2 bg-black hover:bg-[#454545] rounded-xl">
             <Link href="/#home" scroll={false}>
@@ -50,8 +50,7 @@ const Home: NextPage = () => {
           </li>
         </ul>
       </nav>
-
-      <main className="flex flex-col justify-center w-full flex-1 ml md:ml-24 md:pr-28 text-center">
+      <main className="flex flex-col justify-center w-full flex-1 ml md:ml-24 md:pr-28 text-center relative z-10 text-husqy-textColor">
         <div id="home" className="flex flex-col justify-center w-full flex-1 px-8 pt-24 mb-80 text-left">
           <h1 className="text-6xl font-bold pb-3">Hello World,</h1>
           <h1 className="text-6xl font-bold pb-3">{"I'm Kiefer"}</h1>
@@ -64,7 +63,7 @@ const Home: NextPage = () => {
         </div>
         <div className="flex flex-col items-center justify-center">
 
-          <div className="flex flex-col justify-center w-3/4 m-4 bg-[#454545] rounded-xl text-left">
+          <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
             <div className="p-4">
               <div className="flex flex-row justify-between">
                 <Link
@@ -74,7 +73,7 @@ const Home: NextPage = () => {
                   className="flex flex-row"
                 >
                   <h3 className="text-2xl font-bold mb-3">InterviewPal</h3>
-                  <Image src="/images/link-solid.svg" alt="Link" className="w-8 h-8 ml-2 color-white" width={32} height={32} />
+                  <Image src="/images/link-solid.svg" alt="Link" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
                 <Link
                   href="https://github.com/InterviewPal/InterviewPal"
@@ -82,7 +81,7 @@ const Home: NextPage = () => {
                   rel="noopener noreferrer"
                   className="flex flex-row"
                 >
-                  <Image src="/images/github.svg" alt="Github" className="w-8 h-8 ml-2 color-white" width={32} height={32} />
+                  <Image src="/images/github.svg" alt="Github" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
               </div>
               <Image src="/images/InterviewPal.png" alt="InterviewPal" className="w-3/4 m-auto" width={640} height={360} />
@@ -92,7 +91,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center w-3/4 m-4 bg-[#454545] rounded-xl text-left">
+          <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
             <div className="p-4">
               <div className="flex flex-row justify-between">
                 <h3 className="text-2xl font-bold pb-3">FFSandbox</h3>
@@ -105,7 +104,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center w-3/4 m-4 bg-[#454545] rounded-xl text-left">
+          <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
             <div className="p-4">
               <div className="flex flex-row justify-between">
                 <Link
@@ -115,7 +114,7 @@ const Home: NextPage = () => {
                   className="flex flex-row w-min"
                 >
                   <h3 className="text-2xl font-bold  pb-3">WordGotchu</h3>
-                  <Image src="/images/link-solid.svg" alt="Link" className="w-8 h-8 ml-2 color-white" width={32} height={32} />
+                  <Image src="/images/link-solid.svg" alt="Link" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
                 <Link
                   href="https://github.com/iantelli/word-gotchu"
@@ -123,7 +122,7 @@ const Home: NextPage = () => {
                   rel="noopener noreferrer"
                   className="flex flex-row"
                 >
-                  <Image src="/images/github.svg" alt="Github" className="w-8 h-8 ml-2 color-white" width={32} height={32} />
+                  <Image src="/images/github.svg" alt="Github" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
               </div>
               <Image src="/images/WordGotchu.png" alt="WordGotchu" className="w-3/4 m-auto" width={640} height={360} />
@@ -134,7 +133,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center w-3/4 m-4 bg-[#454545] rounded-xl text-left">
+          <div className="flex flex-col justify-center w-3/4 m-4 rounded-xl text-left">
             <div className="p-4">
               <div className="flex flex-row justify-between">
                 <Link
@@ -144,7 +143,7 @@ const Home: NextPage = () => {
                   className="flex flex-row w-min"
                 >
                   <h3 className="text-2xl font-bold pb-3">FirstMaps</h3>
-                  <Image src="/images/link-solid.svg" alt="Link" className="w-8 h-8 ml-2 color-white" width={32} height={32} />
+                  <Image src="/images/link-solid.svg" alt="Link" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
                 <Link
                   href="https://github.com/First-Maps/first-maps"
@@ -152,7 +151,7 @@ const Home: NextPage = () => {
                   rel="noopener noreferrer"
                   className="flex flex-row"
                 >
-                  <Image src="/images/github.svg" alt="Github" className="w-8 h-8 ml-2 color-white" width={32} height={32} />
+                  <Image src="/images/github.svg" alt="Github" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
               </div>
               <Image src="/images/FirstMaps.png" alt="FirstMaps" className="w-3/4 m-auto" width={640} height={360} />
@@ -177,7 +176,7 @@ const Home: NextPage = () => {
               href="https://www.linkedin.com/in/kiefer-hogg/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-row justify-center items-center w-12 h-12 rounded-full bg-gray-200 hover:bg-gray-300 m-2"
+              className="flex flex-row justify-center items-center w-12 h-12 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor m-2"
             >
               <Image src="/images/linkedin-in.svg" alt="LinkedIn" className="w-8 h-8" width={32} height={32} />
             </Link>
@@ -185,7 +184,7 @@ const Home: NextPage = () => {
               href="mailto:kieferhogg@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-row justify-center items-center w-12 h-12 rounded-full bg-gray-200 hover:bg-gray-300 m-2"
+              className="flex flex-row justify-center items-center w-12 h-12 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor 0 m-2"
             >
               <Image src="/images/email.svg" alt="Email" className="w-8 h-8" width={32} height={32} />
             </Link>
@@ -193,15 +192,15 @@ const Home: NextPage = () => {
               href="https://www.github.com/kieferhogg"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-row justify-center items-center w-12 h-12 rounded-full bg-gray-200 hover:bg-gray-300 m-2"
+              className="flex flex-row justify-center items-center w-12 h-12 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor m-2"
             >
               <Image src="/images/github.svg" alt="GitHub" className="w-8 h-8" width={32} height={32} />
             </Link>
           </div>
         </div>
       </main>
-      <canvas id="bgCanvas"></canvas>
-      <Script src="/js/bg.js"></Script>
+      <canvas id="bgCanvas" className="bgCanvas"></canvas>
+      <Script src="/js/background.js"></Script>
     </>
   );
 };

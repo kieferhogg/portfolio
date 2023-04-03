@@ -108,7 +108,7 @@ const Home: NextPage = () => {
             <div className="p-4">
               <div className="flex flex-row justify-between">
                 <Link
-                  href="https://wordgotchu.herokuapp.com/"
+                  href="https://word-gotchu.up.railway.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-row w-min"

@@ -8,7 +8,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#__next {
+body {
   overflow-x: hidden;
   background-color: #000000;
 }

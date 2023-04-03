@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       </Head>
       <nav className="flex-row justify-start w-20 m-2 h-screen fixed top-0 left-0 hidden md:flex z-10 text-husqy-textColor">
         <ul className="flex flex-col items-center w-full mt-4">
-          <li className="flex flex-row justify-center items-center w-full my-2 bg-black hover:bg-[#454545] rounded-xl">
+          <li className="flex flex-row justify-center items-center w-full my-2 bg-black hover:bg-[#454545] rounded-xl border border-husqy-textColor">
             <Link href="/#home" scroll={false}>
               <p className="flex flex-row justify-center items-center w-full h-full py-2">
                 <Image src="/images/favicon.png" alt="Home" className="w-8 h-8" width={32} height={32} />
@@ -34,14 +34,14 @@ const Home: NextPage = () => {
               </p>
             </Link>
           </li>
-          <li className="flex flex-row justify-center items-center w-full my-2 bg-black hover:bg-[#454545] rounded-xl">
+          <li className="flex flex-row justify-center items-center w-full my-2 bg-black hover:bg-[#454545] rounded-xl border border-husqy-textColor">
             <Link href="/#portfolio" scroll={false}>
               <p className="flex flex-row justify-center items-center w-full h-full py-2">
                 Portfolio
               </p>
             </Link>
           </li>
-          <li className="flex flex-row justify-center items-center w-full my-2 bg-black hover:bg-[#454545] rounded-xl">
+          <li className="flex flex-row justify-center items-center w-full my-2 bg-black hover:bg-[#454545] rounded-xl border border-husqy-textColor">
             <Link href="/#contact" scroll={false}>
               <p className="flex flex-row justify-center items-center w-full h-full py-2">
                 Contact

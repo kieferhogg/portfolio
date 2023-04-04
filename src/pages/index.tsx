@@ -51,20 +51,19 @@ const Home: NextPage = () => {
         </ul>
       </nav>
       <main className="flex flex-col justify-center w-full flex-1 ml md:ml-24 md:pr-28 text-center relative z-10 text-husqy-textColor">
-        <div id="home" className="flex flex-col justify-center w-full flex-1 px-8 pt-24 mb-80 text-left">
-          <h1 className="text-6xl font-bold pb-3">Hello World,</h1>
-          <h1 className="text-6xl font-bold pb-3">{"I'm Kiefer"}</h1>
+        <div id="home" className="flex flex-col w-full h-screen p-8 md:pt-24 text-left">
+          <h1 className="text-6xl pb-3 font-bold">Hello World,</h1>
+          <h1 className="text-6xl pb-3 font-bold">{"I'm Kiefer"}</h1>
           <h2 className="text-4xl pb-3">Full-Stack Web Developer</h2>
         </div>
-        <div className="flex flex-row justify-center mt-56">
+        <div className="flex flex-row justify-center">
           <h3 id="portfolio" className="text-2xl font-bold pb-3">
             My Portfolio
           </h3>
         </div>
         <div className="flex flex-col items-center justify-center">
-
-          <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
-            <div className="p-4">
+          <div className="flex flex-col justify-center w-3/4 m-4 rounded-xl text-left">
+            <div>
               <div className="flex flex-row justify-between">
                 <Link
                   href="https://interviewpal.vercel.app/"
@@ -92,7 +91,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
-            <div className="p-4">
+            <div>
               <div className="flex flex-row justify-between">
                 <h3 className="text-2xl font-bold pb-3">FFSandbox</h3>
               </div>
@@ -105,7 +104,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
-            <div className="p-4">
+            <div>
               <div className="flex flex-row justify-between">
                 <Link
                   href="https://word-gotchu.up.railway.app/"
@@ -134,7 +133,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="flex flex-col justify-center w-3/4 m-4 rounded-xl text-left">
-            <div className="p-4">
+            <div>
               <div className="flex flex-row justify-between">
                 <Link
                   href="https://www.firstmaps.online/"

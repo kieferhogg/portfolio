@@ -21,8 +21,8 @@ const colors = {
 // Terrain stuff.
 const background = document.getElementById("bgCanvas"),
   bgCtx = background.getContext("2d"),
-  width = window.innerWidth,
-  height = window.innerHeight;
+  width = screen.width,
+  height = screen.height;
 
 background.width = width;
 background.height = height;
@@ -201,3 +201,17 @@ function animate() {
 }
 
 animate();
+
+//resize
+addEventListener("resize", (event) => {
+  let resize;
+  const resizedw = () => {
+    document.querySelectorAll(".bgCanvas").forEach((canvas) => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  };
+
+  clearTimeout(resize);
+  resize = setTimeout(resizedw, 500);
+});

@@ -71,12 +71,10 @@ const Home: NextPage = () => {
           <h1 className="text-6xl pb-3 font-bold break-words" data-value="Hello World,">Hello World,</h1>
           <h1 className="text-6xl pb-3 font-bold break-words" data-value="I'm Kiefer">{"I'm Kiefer"}</h1>
           <h2 className="text-4xl pb-3 break-words" data-value="Full-Stack Web Developer">Full-Stack Web Developer</h2>
-          <div>
-            <div className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity animate-bounce ease-out duration-700 ${scroll ? "opacity-0" : "opacity-100"}`}>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </div>
+          <div className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity animate-bounce ease-out duration-700 ${scroll ? "opacity-0" : "opacity-100"}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
           </div>
         </div>
         <div className="flex flex-row justify-center">

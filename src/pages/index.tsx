@@ -3,8 +3,24 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Script from 'next/script'
+import { useEffect, useState } from "react";
+
 
 const Home: NextPage = () => {
+  // on page scroll hide arrow
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <Head>
@@ -55,6 +71,13 @@ const Home: NextPage = () => {
           <h1 className="text-6xl pb-3 font-bold break-words" data-value="Hello World,">Hello World,</h1>
           <h1 className="text-6xl pb-3 font-bold break-words" data-value="I'm Kiefer">{"I'm Kiefer"}</h1>
           <h2 className="text-4xl pb-3 break-words" data-value="Full-Stack Web Developer">Full-Stack Web Developer</h2>
+          <div>
+            <div className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity animate-bounce ease-out duration-700 ${scroll ? "opacity-0" : "opacity-100"}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+          </div>
         </div>
         <div className="flex flex-row justify-center">
           <h3 id="portfolio" className="text-2xl font-bold pb-3 mt-8" data-value="My Portfolio">
@@ -209,7 +232,7 @@ const Home: NextPage = () => {
                 </p>
                 <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Storybook
-                </p>   
+                </p>
                 <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   OpenMaps
                 </p>

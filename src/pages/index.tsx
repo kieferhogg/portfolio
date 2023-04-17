@@ -52,9 +52,9 @@ const Home: NextPage = () => {
       </nav>
       <main className="flex flex-col justify-center w-full flex-1 ml md:ml-24 md:pr-28 text-center relative z-10 text-husqy-textColor">
         <div id="home" className="flex flex-col w-full h-screen p-8 md:pt-24 text-left">
-          <h1 className="text-6xl pb-3 font-bold" data-value="Hello World,">Hello World,</h1>
-          <h1 className="text-6xl pb-3 font-bold" data-value="I'm Kiefer">{"I'm Kiefer"}</h1>
-          <h2 className="text-4xl pb-3" data-value="Full-Stack Web Developer">Full-Stack Web Developer</h2>
+          <h1 className="text-6xl pb-3 font-bold break-words" data-value="Hello World,">Hello World,</h1>
+          <h1 className="text-6xl pb-3 font-bold break-words" data-value="I'm Kiefer">{"I'm Kiefer"}</h1>
+          <h2 className="text-4xl pb-3 break-words" data-value="Full-Stack Web Developer">Full-Stack Web Developer</h2>
         </div>
         <div className="flex flex-row justify-center">
           <h3 id="portfolio" className="text-2xl font-bold pb-3 mt-8" data-value="My Portfolio">
@@ -84,20 +84,20 @@ const Home: NextPage = () => {
                 </Link>
               </div>
               <Image src="/images/InterviewPal.png" alt="InterviewPal" className="w-3/4 m-auto" width={640} height={360} />
-              <div className="flex flex-row mt-4">
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+              <div className="flex flex-row flex-wrap mt-4">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Next.Js
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   TailwindCSS
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   TypeScript
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   GPT-3.5
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Redis
                 </p>
               </div>
@@ -111,20 +111,20 @@ const Home: NextPage = () => {
           <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
             <div>
               <div className="flex flex-row justify-between">
-                <h3 className="text-2xl font-bold hover:text-husqy-mainColor mb-3" data-value="FFSandbox (work in progress)">FFSandbox (work in progress)</h3>
+                <h3 className="text-2xl font-bold hover:text-husqy-mainColor mb-3 break-all" data-value="FFSandbox (work in progress)">FFSandbox (work in progress)</h3>
               </div>
               <Image src="/images/FFSandbox.png" alt="FFSandbox" className="w-3/4 m-auto" width={640} height={360} />
-              <div className="flex flex-row mt-4">
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+              <div className="flex flex-row flex-wrap mt-4">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Next.Js
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   TailwindCSS
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   TypeScript
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   PlanetScale
                 </p>
               </div>
@@ -157,17 +157,17 @@ const Home: NextPage = () => {
                 </Link>
               </div>
               <Image src="/images/WordGotchu.png" alt="WordGotchu" className="w-3/4 m-auto" width={640} height={360} />
-              <div className="flex flex-row mt-4">
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+              <div className="flex flex-row flex-wrap mt-4">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   JavaScript
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   CSS/HTML
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Express
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Firebase
                 </p>
               </div>
@@ -200,20 +200,20 @@ const Home: NextPage = () => {
                 </Link>
               </div>
               <Image src="/images/FirstMaps.png" alt="FirstMaps" className="w-3/4 m-auto" width={640} height={360} />
-              <div className="flex flex-row mt-4">
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+              <div className="flex flex-row flex-wrap mt-4">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Next.js
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Sass
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Storybook
                 </p>   
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   OpenMaps
                 </p>
-                <p className="text-l py-1.5 px-2 mr-2 rounded-xl border border-husqy-textColor">
+                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   MongoDB
                 </p>
               </div>

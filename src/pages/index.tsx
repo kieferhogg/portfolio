@@ -52,12 +52,12 @@ const Home: NextPage = () => {
       </nav>
       <main className="flex flex-col justify-center w-full flex-1 ml md:ml-24 md:pr-28 text-center relative z-10 text-husqy-textColor">
         <div id="home" className="flex flex-col w-full h-screen p-8 md:pt-24 text-left">
-          <h1 className="text-6xl pb-3 font-bold">Hello World,</h1>
-          <h1 className="text-6xl pb-3 font-bold">{"I'm Kiefer"}</h1>
-          <h2 className="text-4xl pb-3">Full-Stack Web Developer</h2>
+          <h1 className="text-6xl pb-3 font-bold" data-value="Hello World,">Hello World,</h1>
+          <h1 className="text-6xl pb-3 font-bold"data-value="I'm Kiefer">{"I'm Kiefer"}</h1>
+          <h2 className="text-4xl pb-3" data-value="Full-Stack Web Developer">Full-Stack Web Developer</h2>
         </div>
         <div className="flex flex-row justify-center">
-          <h3 id="portfolio" className="text-2xl font-bold pb-3">
+          <h3 id="portfolio" className="text-2xl font-bold pb-3 mt-8" data-value="My Portfolio">
             My Portfolio
           </h3>
         </div>
@@ -69,9 +69,9 @@ const Home: NextPage = () => {
                   href="https://interviewpal.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-row"
+                  className="flex flex-row mb-3"
                 >
-                  <h3 className="text-2xl font-bold mb-3">InterviewPal</h3>
+                  <h3 className="text-2xl font-bold hover:text-husqy-mainColor" data-value="InterviewPal">InterviewPal</h3>
                   <Image src="/images/link-solid.svg" alt="Link" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
                 <Link
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
               </div>
               <Image src="/images/InterviewPal.png" alt="InterviewPal" className="w-3/4 m-auto" width={640} height={360} />
               <p className="text-l py-3">
-                {"InterviewPal is a GPT-3.5 powered AI that helps you practice for your interviews. It will ask you common and relevant interview questions and give you insightful feedback on your answers."}
+                {"On InterviewPal , I played a crucial role in creating a seamless and user-friendly experience for job seekers. Leveraging my skills in front-end development, I brought the InterviewPal platform to life by designing intuitive pages that enable users to practice for their interviews with ease. Through my contributions, users can now benefit from the cutting-edge GPT-3.5 technology that powers the platform, receiving personalized feedback on their answers to common interview questions. With my focus on delivering a top-notch user experience, I am proud to have played a pivotal role in making InterviewPal a valuable tool for job seekers everywhere."}
               </p>
             </div>
           </div>
@@ -93,26 +93,26 @@ const Home: NextPage = () => {
           <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
             <div>
               <div className="flex flex-row justify-between">
-                <h3 className="text-2xl font-bold pb-3">FFSandbox</h3>
+                <h3 className="text-2xl font-bold hover:text-husqy-mainColor mb-3" data-value="FFSandbox (work in progress)">FFSandbox (work in progress)</h3>
               </div>
               <Image src="/images/FFSandbox.png" alt="FFSandbox" className="w-3/4 m-auto" width={640} height={360} />
               <p className="text-l py-3">
-                {"FFSandbox (work in progress) is a raid planning tool for Final Fantasy XIV. Users can create and share their own raid plans with the community. Guides and resources are also available to help users plan their raids."}
+                {"On FFSandbox, I was instrumental in creating a comprehensive and dynamic raid planning tool for Final Fantasy XIV players. With my expertise in full stack development, I helped to build a platform that enables users to easily create and share their own customized raid plans with the community, fostering a collaborative and engaged community of players. Through my contributions, I also incorporated valuable guides and resources that assist users in planning their raids, providing them with the necessary knowledge and tools to succeed in their gameplay. As a result of my dedication to delivering a seamless and intuitive user experience, I am proud to have helped establish FFSandbox as a go-to resource for Final Fantasy XIV players looking to optimize their raid strategies and connect with fellow enthusiasts."}
               </p>
 
             </div>
           </div>
 
-          <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
+          <div className="flex flex-col justify-center w-3/4 m-4 rounded-xl text-left">
             <div>
               <div className="flex flex-row justify-between">
                 <Link
                   href="https://word-gotchu.up.railway.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-row w-min"
+                  className="flex flex-row w-min mb-3"
                 >
-                  <h3 className="text-2xl font-bold  pb-3">WordGotchu</h3>
+                  <h3 className="text-2xl font-bold hover:text-husqy-mainColor" data-value="WordGotchu">WordGotchu</h3>
                   <Image src="/images/link-solid.svg" alt="Link" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
                 <Link
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
               </div>
               <Image src="/images/WordGotchu.png" alt="WordGotchu" className="w-3/4 m-auto" width={640} height={360} />
               <p className="text-l py-3">
-                {"WordGotchu is a Pixel styled web platform game based on Wordle and original characters known as \"Gotchus\" that battle against each other in an arena."}
+                {"On WordGotchu, I played a key role in bringing a dynamic and engaging gaming experience to life. Leveraging my skills in back-end development, I created the necessary code to enable seamless multiplayer functionality for the game, allowing players to compete against each other in real-time. Additionally, I contributed to the development of the game's unique \"Gotchus\" characters, designing their abilities and bringing them to life through code. Through my work, I helped establish WordGotchu as a captivating and immersive game, combining the addictive gameplay of Wordle with a vibrant and original Pixel art style. As a result of my contributions, players can now battle it out in the arena with their custom Gotchus and enjoy a thrilling gaming experience."}
               </p>
 
             </div>
@@ -139,9 +139,9 @@ const Home: NextPage = () => {
                   href="https://www.firstmaps.online/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-row w-min"
+                  className="flex flex-row w-min mb-3"
                 >
-                  <h3 className="text-2xl font-bold pb-3">FirstMaps</h3>
+                  <h3 className="text-2xl font-bold hover:text-husqy-mainColor" data-value="FirstMaps">FirstMaps</h3>
                   <Image src="/images/link-solid.svg" alt="Link" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
                 <Link
@@ -155,7 +155,7 @@ const Home: NextPage = () => {
               </div>
               <Image src="/images/FirstMaps.png" alt="FirstMaps" className="w-3/4 m-auto" width={640} height={360} />
               <p className="text-l py-3">
-                {"FirstMaps is a web application that allows First Nations communities to share their culture and histroy on a map. Users can create and view points of interest on a map and learn about the history and language of the First Nations community in that area."}
+                {"On FirstMaps, I played a vital role in creating a platform that facilitates the sharing of culture and history of First Nations communities through the power of maps. Utilizing my expertise in map API development, I enabled users to create and view points of interest on a map, providing an immersive and interactive way to learn about the unique history and language of First Nations communities in a given area. Through my contributions, I also developed a powerful search functionality that enables users to easily find locations of interest and learn more about the rich cultural heritage of First Nations communities. By leveraging cutting-edge technology to foster cross-cultural understanding and appreciation, I am proud to have played a significant role in making the FirstMaps platform a valuable resource for First Nations communities and anyone seeking to learn more about their rich and diverse history."}
               </p>
 
             </div>
@@ -163,7 +163,7 @@ const Home: NextPage = () => {
         </div>
         <div className="my-16">
           <div className="flex flex-row justify-center">
-            <h3 id="contact" className="text-2xl font-bold pb-3">
+            <h3 id="contact" className="text-2xl font-bold pb-3" data-value="Contact Me">
               Contact Me
             </h3>
           </div>

@@ -1,51 +1,49 @@
+"use strict";
 (function () {
-  const requestAnimationFrame =
-    window.requestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
+  window.requestAnimationFrame =
+    window?.requestAnimationFrame ??
+    window?.mozRequestAnimationFrame ??
+    window?.webkitRequestAnimationFrame ??
+    window?.msRequestAnimationFrame ??
     function (callback) {
       window.setTimeout(callback, 1000 / 60);
     };
-  window.requestAnimationFrame = requestAnimationFrame;
 })();
 
-const colors = {
-  sky: "#0A0310",
-  stars: "#EBD7FF",
-  mountain1: "#260C40",
-  mountain2: "#130620",
-  mountain3: "#000000",
-};
+const sky = "#0A0310";
+const stars = "#EBD7FF";
+const mountain1 = "#260C40";
+const mountain2 = "#130620";
+const mountain3 = "#000000";
 
 // Terrain stuff.
-const background = document.getElementById("bgCanvas"),
-  bgCtx = background.getContext("2d"),
-  width = screen.width,
-  height = screen.height;
+const background = document.getElementById("bgCanvas");
+const bgCtx = background.getContext("2d");
+const width = screen.width;
+const height = screen.height;
 
 background.width = width;
 background.height = height;
 
 class Terrain {
   constructor(options) {
-    options = options || {};
+    options = options ?? {};
     this.terrain = document.createElement("canvas");
     this.terCtx = this.terrain.getContext("2d");
-    this.scrollDelay = options.scrollDelay || 90;
+    this.scrollDelay = options.scrollDelay ?? 90;
     this.lastScroll = new Date().getTime();
 
     this.terrain.width = width;
     this.terrain.height = height;
-    this.terrain.className = "bgCanvas";
-    this.fillStyle = options.fillStyle || colors.mountain1;
-    this.mHeight = options.mHeight || height;
+    this.terrain.className = `bgCanvas`;
+    this.fillStyle = options.fillStyle ?? mountain1;
+    this.mHeight = options.mHeight ?? height;
 
     // generate
     this.points = [];
 
-    let displacement = options.displacement || 140,
-      power = Math.pow(2, Math.ceil(Math.log(width) / Math.log(2)));
+    let displacement = options.displacement ?? 140;
+    const power = Math.pow(2, Math.ceil(Math.log(width) / Math.log(2)));
 
     // set the start height and end height for the terrain
     this.points[0] = this.mHeight; //(this.mHeight - (Math.random() * this.mHeight / 2)) - displacement;
@@ -90,7 +88,7 @@ class Terrain {
 }
 
 // Second canvas used for the stars
-bgCtx.fillStyle = colors.stars;
+bgCtx.fillStyle = stars;
 bgCtx.fillRect(0, 0, width, height);
 
 // stars
@@ -135,7 +133,7 @@ class ShootingStar {
     if (this.active) {
       this.x -= this.speed;
       this.y += this.speed;
-      if (this.x < 0 || this.y >= height) {
+      if (this.x < 0 ?? this.y >= height) {
         this.reset();
       } else {
         bgCtx.lineWidth = this.size;
@@ -172,7 +170,7 @@ entities.push(
   new Terrain({
     displacement: 120,
     scrollDelay: 50,
-    fillStyle: colors.mountain2,
+    fillStyle: mountain2,
     mHeight: height / 2 - 60,
   })
 );
@@ -180,17 +178,17 @@ entities.push(
   new Terrain({
     displacement: 100,
     scrollDelay: 20,
-    fillStyle: colors.mountain3,
+    fillStyle: mountain3,
     mHeight: height / 2,
   })
 );
 
 //animate background
 function animate() {
-  bgCtx.fillStyle = colors.sky;
+  bgCtx.fillStyle = sky;
   bgCtx.fillRect(0, 0, width, height);
-  bgCtx.fillStyle = colors.stars;
-  bgCtx.strokeStyle = colors.stars;
+  bgCtx.fillStyle = stars;
+  bgCtx.strokeStyle = stars;
 
   let entLen = entities.length;
 
@@ -214,4 +212,53 @@ addEventListener("resize", (event) => {
 
   clearTimeout(resize);
   resize = setTimeout(resizedw, 500);
+});
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      let iteration = 0;
+
+      // get the interval for this element from the intervals Map
+      const interval = intervals.get(entry.target);
+      clearInterval(interval);
+
+      // create a new interval for this element and store it in the intervals Map
+      const newInterval = setInterval(() => {
+        entry.target.innerText = entry.target.innerText
+          .split("")
+          .map((letter, index) => {
+            if (index < iteration) {
+              return entry.target.dataset.value[index];
+            }
+
+            return letters[Math.floor(Math.random() * 26)];
+          })
+          .join("");
+
+        if (iteration >= entry.target.dataset.value.length) {
+          clearInterval(newInterval);
+        }
+
+        iteration += 1 / 2;
+      }, 30);
+
+      intervals.set(entry.target, newInterval);
+    }
+  });
+});
+
+// observe all h1-3 lements
+const elements = [
+  ...document.querySelectorAll("h1"),
+  ...document.querySelectorAll("h2"),
+  ...document.querySelectorAll("h3"),
+];
+const intervals = new Map();
+
+elements.forEach((element) => {
+  intervals.set(element, null); // initialize the intervals Map with null for each element
+  observer.observe(element);
 });

@@ -242,8 +242,8 @@ const observer = new IntersectionObserver((entries) => {
           clearInterval(newInterval);
         }
 
-        iteration += 1 / 2;
-      }, 30);
+        iteration += 1 / 3;
+      }, 10);
 
       intervals.set(entry.target, newInterval);
     }

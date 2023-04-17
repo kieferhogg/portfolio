@@ -83,7 +83,7 @@ const Home: NextPage = () => {
                   <Image src="/images/github.svg" alt="Github" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
               </div>
-              <Image src="/images/InterviewPal.png" alt="InterviewPal" className="w-3/4 m-auto" width={640} height={360} />
+              <Image src="/images/InterviewPal.png" alt="InterviewPal" className="w-3/4 m-auto rounded-lg" width={640} height={360} />
               <div className="flex flex-row flex-wrap mt-4">
                 <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Next.Js
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
               <div className="flex flex-row justify-between">
                 <h3 className="text-2xl font-bold hover:text-husqy-mainColor mb-3 break-all" data-value="FFSandbox (work in progress)">FFSandbox (work in progress)</h3>
               </div>
-              <Image src="/images/FFSandbox.png" alt="FFSandbox" className="w-3/4 m-auto" width={640} height={360} />
+              <Image src="/images/FFSandbox.png" alt="FFSandbox" className="w-3/4 m-auto rounded-lg" width={640} height={360} />
               <div className="flex flex-row flex-wrap mt-4">
                 <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Next.Js
@@ -156,7 +156,7 @@ const Home: NextPage = () => {
                   <Image src="/images/github.svg" alt="Github" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
               </div>
-              <Image src="/images/WordGotchu.png" alt="WordGotchu" className="w-3/4 m-auto" width={640} height={360} />
+              <Image src="/images/WordGotchu.png" alt="WordGotchu" className="w-3/4 m-auto rounded-lg" width={640} height={360} />
               <div className="flex flex-row flex-wrap mt-4">
                 <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   JavaScript
@@ -199,7 +199,7 @@ const Home: NextPage = () => {
                   <Image src="/images/github.svg" alt="Github" className="w-8 h-8 ml-2 p-0.5 rounded-full hover:bg-husqy-mainColor bg-husqy-subColor" width={32} height={32} />
                 </Link>
               </div>
-              <Image src="/images/FirstMaps.png" alt="FirstMaps" className="w-3/4 m-auto" width={640} height={360} />
+              <Image src="/images/FirstMaps.png" alt="FirstMaps" className="w-3/4 m-auto rounded-lg" width={640} height={360} />
               <div className="flex flex-row flex-wrap mt-4">
                 <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
                   Next.js

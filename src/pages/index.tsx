@@ -128,34 +128,6 @@ const Home: NextPage = () => {
               </p>
             </div>
           </div>
-
-          <div className="flex flex-col justify-center w-3/4 m-4  rounded-xl text-left">
-            <div>
-              <div className="flex flex-row justify-between">
-                <h3 className="text-2xl font-bold hover:text-husqy-mainColor mb-3 break-all" data-value="FFSandbox (work in progress)">FFSandbox (work in progress)</h3>
-              </div>
-              <Image src="/images/FFSandbox.png" alt="FFSandbox" className="w-3/4 m-auto rounded-lg" width={640} height={360} />
-              <div className="flex flex-row flex-wrap mt-4">
-                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
-                  Next.Js
-                </p>
-                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
-                  TailwindCSS
-                </p>
-                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
-                  TypeScript
-                </p>
-                <p className="text-l py-1.5 px-2 mr-2 mt-2 rounded-xl border border-husqy-textColor">
-                  PlanetScale
-                </p>
-              </div>
-              <p className="text-l py-3">
-                {"On FFSandbox, I was instrumental in creating a comprehensive and dynamic raid planning tool for Final Fantasy XIV players. With my expertise in full stack development, I helped to build a platform that enables users to easily create and share their own customized raid plans with the community, fostering a collaborative and engaged community of players. Through my contributions, I also incorporated valuable guides and resources that assist users in planning their raids, providing them with the necessary knowledge and tools to succeed in their gameplay. As a result of my dedication to delivering a seamless and intuitive user experience, I am proud to have helped establish FFSandbox as a go-to resource for Final Fantasy XIV players looking to optimize their raid strategies and connect with fellow enthusiasts."}
-              </p>
-
-            </div>
-          </div>
-
           <div className="flex flex-col justify-center w-3/4 m-4 rounded-xl text-left">
             <div>
               <div className="flex flex-row justify-between">

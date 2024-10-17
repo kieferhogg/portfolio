@@ -214,54 +214,38 @@ addEventListener("resize", (event) => {
   resize = setTimeout(resizedw, 500);
 });
 
+const h1Element = document.querySelector("h1");
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let interval;
+let iteration = 0;
+const x = 6; // Number of seconds between each execution
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      let iteration = 0;
+function scrambleText() {
+  if (!h1Element.dataset.value) {
+    return;
+  }
+  iteration = 0;
 
-      // get the interval for this element from the intervals Map
-      const interval = intervals.get(entry.target);
+  clearInterval(interval);
+
+  interval = setInterval(() => {
+    h1Element.innerText = h1Element.innerText
+      .split("")
+      .map((letter, index) => {
+        if (index < iteration) {
+          return h1Element.dataset.value[index];
+        }
+        return letters[Math.floor(Math.random() * letters.length)];
+      })
+      .join("");
+
+    if (iteration >= h1Element.dataset.value.length) {
       clearInterval(interval);
-
-      // create a new interval for this element and store it in the intervals Map
-      const newInterval = setInterval(() => {
-        if (!entry.target.dataset.value) {
-          return;
-        }
-        entry.target.innerText = entry.target.innerText
-          .split("")
-          .map((letter, index) => {
-            if (index < iteration) {
-              return entry.target.dataset.value[index];
-            }
-
-            return letters[Math.floor(Math.random() * 26)];
-          })
-          .join("");
-
-        if (iteration >= entry.target.dataset.value.length) {
-          clearInterval(newInterval);
-        }
-
-        iteration += 1 / 3;
-      }, 10);
-
-      intervals.set(entry.target, newInterval);
     }
-  });
-});
 
-// observe all h1-3 lements
-const elements = [
-  ...document.querySelectorAll("h1"),
-  ...document.querySelectorAll("h2"),
-  ...document.querySelectorAll("h3"),
-];
-const intervals = new Map();
+    iteration += 1 / 5;
+  }, 30);
+}
 
-elements.forEach((element) => {
-  intervals.set(element, null); // initialize the intervals Map with null for each element
-  observer.observe(element);
-});
+// Trigger the scrambleText function every x seconds
+setInterval(scrambleText, x * 1000);

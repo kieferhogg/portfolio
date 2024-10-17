@@ -12,8 +12,8 @@ const StartingSoon: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col justify-center w-full flex-1 ml-24 pr-28 text-center relative z-10 text-husqy-textColor">
-        <div id="home" className="flex flex-col w-full h-screen pt-24 text-left">
+      <main className="flex flex-col justify-center w-full flex-1 text-center relative z-10 text-husqy-textColor">
+        <div id="home" className="flex flex-col w-full justify-center pt-96 h-screen">
           <h1 className="text-6xl font-bold break-words" data-value={text}>{text}</h1>
         </div>
 

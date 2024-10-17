@@ -1,14 +1,14 @@
-import { NextPage } from 'next';
+import { type NextPage } from "next";
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 
 
 
-const startingSoon: NextPage = () => {
+const StartingSoon: NextPage = () => {
   const router = useRouter();
   const { query } = router;
 
-  const text = query.text;
+  const text = query.text as string || "";
 
   return (
     <>
@@ -24,4 +24,4 @@ const startingSoon: NextPage = () => {
   );
 }
 
-export default startingSoon;
+export default StartingSoon;

@@ -218,7 +218,7 @@ const h1Element = document.querySelector("h1");
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval;
 let iteration = 0;
-const x = 6; // Number of seconds between each execution
+const x = 25; // Number of seconds between each execution
 
 function scrambleText() {
   if (!h1Element.dataset.value) {
@@ -243,7 +243,7 @@ function scrambleText() {
       clearInterval(interval);
     }
 
-    iteration += 1 / 5;
+    iteration += 1 / 3;
   }, 30);
 }
 
